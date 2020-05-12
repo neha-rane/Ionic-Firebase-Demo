@@ -1,0 +1,42 @@
+<ion-header> 
+  <ion-toolbar color = "danger">
+      <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title>Basic Details</ion-card-title>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="details"><b>Name: </b> Neha Rane</ion-col>
+          </ion-row><br>
+          <ion-row>
+            <ion-col class="details"><b>UID: </b> 2018450040</ion-col>
+          </ion-row><br>
+          <ion-row>
+            <ion-col class="details"><b>Class: </b> SYMCA</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-header>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+            <ion-button color="danger">
+                 Logout
+              </ion-button>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+</ion-content>
