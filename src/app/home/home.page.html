@@ -1,48 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="customize">
-    <ion-title style="letter-spacing: 1.2px;">
-      Sign Up
+  <ion-toolbar>
+    <ion-title>
+      File Upload
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="margin-top: 2rem;">
-  <ion-grid>
-    <form #f="ngForm" (ngSubmit)="register(f.value)">
-      <ion-card class="card-center">
-
-        <ion-item lines="full">
-          <ion-label>Name</ion-label>
-          <ion-input ngModel #name="ngModel" name="name" type="text" required></ion-input>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label>Email</ion-label>
-          <ion-input ngModel #email="ngModel" name="email" type="email" required></ion-input>
-        </ion-item>
-
-        <ion-item lines="full">
-          <ion-label>Password</ion-label>
-          <ion-input ngModel #password="ngModel" name="password" type="password" required></ion-input>
-        </ion-item>
-
-        <ion-item lines="full">
-          
-          <ion-label>Mobile number</ion-label>
-          <ion-input ngModel #mobile="ngModel" name="mobile" type="number" required></ion-input>
-        </ion-item>
-
-    
-          <br>
-          <ion-button class="btn-submit" type="submit" expand="block">SIGN UP
-          </ion-button><br>
-        
-        <ion-row class="ion-justify-content-center">
-          <ion-label>Already have an account? <span routerLink='/login/'>Log in</span> here</ion-label>
-        </ion-row>
-        <br>
-
-      </ion-card>
-
-    </form>
-  </ion-grid>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-button expand="block" color="dark" (click)="openLocalPdf()">
+        Open Local PDF
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-button expand="block" color="dark" (click)="downloadAndOpenLocalPdf()">
+        Download File
+      </ion-button>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
+ 

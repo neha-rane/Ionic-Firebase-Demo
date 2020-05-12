@@ -1,34 +1,31 @@
-.btn-submit{
-    border: 1px solid #4c00da;
-    height: 2rem;
-    letter-spacing: 1px;
-    --background: #fff;
-    --color: #4c00da;
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-ion-row > ion-label{
-    font-size: 1rem;
-    --color: #4c00da;
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
 }
 
-//ion-row > ion-input span {width:auto;}
+#container p {
+  font-size: 16px;
+  line-height: 22px;
 
-ion-row > ion-label > span{
-    font-size: 1rem;
-    color: #4c00da;
+  color: #8c8c8c;
+
+  margin: 0;
 }
 
-.customize{
-    --background: #4c00da;
-    --color: #fff;
+#container a {
+  text-decoration: none;
 }
 
-ion-item.item-has-focus > ion-label {
-    color: #4c00da;
-}
-
-.card-center{
-    width:95%; 
-    display:block;
-    margin: 0 auto;
+ion-content ion-toolbar {
+  --background: translucent;
 }
