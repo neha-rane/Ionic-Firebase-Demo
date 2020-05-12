@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar class="customize">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="task"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="letter-spacing: 1px;">ADD TASK</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!taskId; else editTask">
+    <ion-row class="ion-justify-content-center">
+      <img *ngIf="imgURL" class="card-img-top img-thumbnail" style="height: 15rem" [src]="imgURL">
+      <input #file style="display:none" name="image" id="image" type="file" (change)="preview(file.files)"
+        accept="image/*">
+      <ion-button class="btn-change-picture" (click)="file.click()">Add Picture</ion-button>
+    </ion-row>
+
+    <ion-item>
+      <ion-label>Hobbies</ion-label>
+      <ion-input [(ngModel)]="title" #titles="ngModel" name="title" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-input [(ngModel)]="description" #descriptions="ngModel" name="decription" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-row class="ion-justify-content-center">
+      <ion-button class="btn-add" (click)="add()">ADD</ion-button>
+    </ion-row>
+  </div>
+  <ng-template #editTask>
+    <ion-row class="ion-justify-content-center">
+      <img style="height: 15rem" [src]="imgURL">
+      <input #file style="display:none" name="image" id="image" type="file" (change)="preview(file.files)"
+        accept="image/*">
+      <ion-button class="btn-change-picture" (click)="file.click()">Change Picture</ion-button>
+    </ion-row>
+    
+      <ion-item>
+        <ion-label>Hobbies</ion-label>
+        <ion-input [(ngModel)]="title" #titles="ngModel" name="title" type="text" required></ion-input>
+      </ion-item>
+      <ion-item style="margin-top: 1rem;">
+        <ion-label>Address</ion-label>
+        <ion-input [(ngModel)]="description" #descriptions="ngModel" name="decription" type="text" required></ion-input>
+      </ion-item>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-add" (click)="update()">UPDATE</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="btn-update" (click)="delete()">DELETE</ion-button>
+      </ion-col>
+    </ion-row>
+  </ng-template>
+
+</ion-content>

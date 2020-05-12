@@ -1,0 +1,48 @@
+.btn-change-picture{
+    margin-top: 1rem;
+    border: 1px solid #4c00da;
+    height: 2rem;
+    letter-spacing: 1px;
+    --background: #fff;
+    --color: #4c00da;
+}
+
+.btn-change-picture :active{
+    --background: #fff !important;
+    --color: #4c00da !important;
+}
+
+.btn-add{
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
+    width: 90%;
+    height: 2rem;
+    font-weight: 400;
+    --background: #fff;
+    border: 1px solid #4c00da;
+    --color: #4c00da;
+}
+
+ion-card{
+    padding-top: 10px;
+}
+
+.btn-update{
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
+    width: 90%;
+    height: 2rem;
+    font-weight: 400;
+    --background: #fff;
+    --color: #4c00da;
+    border: 1px solid #4c00da;
+}
+
+.customize{
+    --background: #4c00da;
+    --color: #fff;
+}
+
+ion-item.item-has-focus > ion-label {
+    color: #4c00da;
+}

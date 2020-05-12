@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="customize">
+    <ion-title style="letter-spacing: 1px;">TASK</ion-title>
+    <ion-label slot="end" (click)="logout()">
+      <ion-icon name="log-out-outline" class="logOutIcon"></ion-icon>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-list *ngIf="tasks">
+      <ion-card *ngFor="let task of tasks">
+        <ion-row [routerLink]="['/new-task/', task.payload.doc.id]">
+          <ion-col size="3">
+            <div class="div-img">
+              <img [src]="task.payload.doc.get('imagePath')">
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <p class="title">{{task.payload.doc.get('title')}}</p>
+            <p>{{task.payload.doc.get('description')}}</p>
+          </ion-col>
+          <ion-col size="3" class="ion-align-self-center">
+            <a [routerLink]="['/new-task/', task.payload.doc.id]">DETAILS</a>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="newtask()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
