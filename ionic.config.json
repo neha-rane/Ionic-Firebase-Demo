@@ -1,5 +1,7 @@
 {
-  "name": "MP-Blank",
-  "integrations": {},
+  "name": "CalCam",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
